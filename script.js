@@ -14,7 +14,7 @@ function startSpam(urls) {
         setInterval(spam, 100, urls[i]);
     }
 }
-function sync_to_localstorage() {
+function syncToLocalStorage() {
     window.localStorage.setItem("session-counter", num.toString());
 }
 function spam(url) {
@@ -38,4 +38,4 @@ function spam(url) {
 }))().catch(err => {
     console.error(err);
 });
-setInterval(sync_to_localstorage, 1000);
+setInterval(syncToLocalStorage, 1000);
