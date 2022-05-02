@@ -7,15 +7,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Building Typescript
-        uses: FuLagann/tsc-build-push@v1
+      - name: TypeScript Build
+        uses: alexthemaster/action-build-typescript@v1.2.1
         with:
-          user-name: "TypeScript Compiler"
-          user-email: "tsc-compiler-noreply@malwarefight.gq"
-          message: "TypeScript built!"
-          directories: ./
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          # Whether or not to push the compiled code to a different branch
+          pushToBranch: true
+          # The name of the branch the action should push the compiled code
+          # Your GitHub secret token
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
