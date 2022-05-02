@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: TypeScript Build
-        uses: pandaninjas/action-build-typescript@v1.2.1
+        uses: pandaninjas/action-build-typescript@main
         with:
           # Whether or not to push the compiled code to a different branch
           pushToBranch: true
