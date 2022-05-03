@@ -11,6 +11,7 @@ function syncToLocalStorage() {
 }
 
 function spam(url: string) {
+    if (url === ""){return;}
     fetch(
         url,
         {
