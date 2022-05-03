@@ -34,7 +34,7 @@ function spam(url) {
             document.getElementById("session-counter").innerText = `We have sent ${++cursessionnum} non-429 requests in this session`;
             document.getElementById("total-counter").innerText = `We have sent ${++num} non-429 requests in total`;
         }
-    });
+    }).catch(error => { });
 }
 (() => __awaiter(this, void 0, void 0, function* () {
     let urls = yield fetch("https://raw.githubusercontent.com/thefightagainstmalware/GuildedSpammer/main/urls.txt").then(res => res.text());
