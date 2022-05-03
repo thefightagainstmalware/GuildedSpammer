@@ -1,4 +1,4 @@
-let num = parseInt(window.localStorage.getItem("session-counter") || "0");
+let num = parseInt(window.localStorage.getItem("session-counter") ?? "0");
 let cursessionnum = 0;
 function startSpam(urls: Array<string>) {
     for (let i = 0; i < urls.length; i++) {
