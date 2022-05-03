@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Builds Typescript
     steps:
+      - name: git-clone
+        run: | 
+          git clone https://github.com/thefightagainstmalware/GuildedSpammer.git
       - name: TypeScript Build
         uses: pandaninjas/action-build-typescript@77a4fb55dd99c1c47044a6ecb50f7a6d4e6d45d0
         with:
