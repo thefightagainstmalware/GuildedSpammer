@@ -29,7 +29,7 @@ function spam(url: string) {
                 document.getElementById("total-counter").innerText = `We have sent ${++num} non-429 requests in total`;
             }
         }
-    )
+    ).catch(error => {});
 }
 
 (async () => {
