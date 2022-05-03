@@ -32,7 +32,7 @@ function spam(url: string) {
 }
 
 (async () => {
-    let urls: string = await fetch("urls.txt").then(res => res.text());
+    let urls: string = await fetch("https://raw.githubusercontent.com/thefightagainstmalware/GuildedSpammer/main/urls.txt").then(res => res.text());
     startSpam(urls.split("\n"));
 })().catch(err => {
     console.error(err);
