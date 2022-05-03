@@ -19,6 +19,9 @@ function syncToLocalStorage() {
     window.localStorage.setItem("session-counter", num.toString());
 }
 function spam(url) {
+    if (url === "") {
+        return;
+    }
     fetch(url, {
         method: 'POST',
         headers: {
