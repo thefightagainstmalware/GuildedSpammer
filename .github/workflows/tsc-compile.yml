@@ -11,9 +11,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: tsc
-        uses: icrawl/action-tsc@v1
-      - name: how does it look down here?
-        run: |
-          pwd
-          ls -lah
+      - name: Building Typescript
+        uses: FuLagann/tsc-build-push@v1
+        with:
+          user-name: "TypeScript Compiler"
+          user-email: "tsc-compiler-noreply@malwarefight.gq"
+          message: "TypeScript built!"
+          directories: ./ 
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: dist
+
