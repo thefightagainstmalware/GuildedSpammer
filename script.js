@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 var _a;
+/*!Don't edit script.js. Edit script.ts*/
 let num = parseInt((_a = window.localStorage.getItem("session-counter")) !== null && _a !== void 0 ? _a : "0");
 let cursessionnum = 0;
 function startSpam(urls) {
