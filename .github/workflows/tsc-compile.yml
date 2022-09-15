@@ -15,6 +15,6 @@ jobs:
         uses: FuLagann/tsc-build-push@v1
         with:
           user-name: "TypeScript Compiler"
-          user-email: "tsc-compiler-noreply@malwarefight.gq"
+          user-email: "noreply_gitbot@malwarefight.gq"
           message: "TypeScript built!"
           directories: ./ 
