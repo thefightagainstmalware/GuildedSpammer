@@ -30,7 +30,7 @@ function spam(url) {
         },
         body: JSON.stringify({ content: "We are Anonymous. We are Legion. We do not forgive. We do not forget. Expect us." })
     }).then((response) => {
-        if (response.status !== 429) {
+        if (response.status < 400) {
             document.getElementById("session-counter").innerText = `We have sent ${++cursessionnum} non-429 requests in this session`;
             document.getElementById("total-counter").innerText = `We have sent ${++num} non-429 requests in total`;
         }
