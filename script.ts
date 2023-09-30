@@ -21,7 +21,7 @@ function spam(url: string) {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({content: "We are Anonymous. We are Legion. We do not forgive. We do not forget. Expect us."})
+            body: JSON.stringify({content: "反恶意软件战争万岁！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！"})
         }
     ).then(
         (response) => {
